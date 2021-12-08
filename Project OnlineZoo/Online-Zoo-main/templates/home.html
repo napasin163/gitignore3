@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Online Zoo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homePage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/firstPage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fristPage.css') }}">
+          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+      body {background-image:url(https://cdn.discordapp.com/attachments/829642144104448011/894613346341507243/BG.jpeg); background-size: cover;
+      background-attachment: fixed;}
+      .container {background: rgb(20, 20, 20);color: #fff;opacity: 0.95;}
+      .center {display: block;margin-left: auto;margin-right: auto;}
+      nav {background: rgb(20, 20, 20);color: #fff;opacity: 1;}
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400&display=swap" rel="stylesheet">
+    <style>body{font-family: 'Mitr', sans-serif;}</style>
+
+  </head>
+  <body>
+    <div class="fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-light bg-info">
+      <img class="img-start"src="/static/images/LOGO.png"height = "5%"width = "5%" href="/home/{{USER}}">
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home/{{USER}}">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animals</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="/Animal1/{{USER}}">นาก</a>
+              <a class="dropdown-item" href="/Animal2/{{USER}}">เพนกวิน</a>
+              <a class="dropdown-item" href="/Animal3/{{USER}}">โคอาล่า</a>
+              <a class="dropdown-item" href="/Animal4/{{USER}}">แพนด้า</a>
+              <a class="dropdown-item" href="/Animal5/{{USER}}">สลอธ</a>
+              <a class="dropdown-item" href="/Animal6/{{USER}}">เสือดำ</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-border-underline my-2 my-sm-0"><a href = "/User/{{USER}}">{{USER}}</a></button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <br><br><br><br><br><br><br><br>
+  <div class="container"style="background-color: #F4DA98;">
+  <br><br>
+    <div class="text-center">
+      <a href="/Animal1/{{USER}}">
+        <img class="img-start"src="/static/images/Otto.gif"height = "25%"width = "25%">
+      </a>
+      <a href="/Animal2/{{USER}}">
+        <img class="img-start"src="/static/images/Penguin.gif"height = "20%"width = "20%">       
+      </a>
+      <a href="/Animal3/{{USER}}">
+        <img class="img-start"src="/static/images/Koala.gif"height = "20%"width = "20%">
+      </a>
+    </div>
+    <div class=" text-center">
+      <div class="btn-group">
+        <button class="btn btn-border-underline  btn-lg"><a href="/Animal1/{{USER}}">นาก</a> </button>
+        <button class="btn btn-border-underline  btn-lg"><a href="/Animal2/{{USER}}">เพนกวิน</a> </button>  
+        <button class="btn btn-border-underline  btn-lg"><a href="/Animal3/{{USER}}">โคอาล่า</a> </button>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="/Animal4/{{USER}}">
+        <img class="img-start"src="/static/images/Panda.gif"height = "20%"width = "20%">
+      </a>
+      <a href="/Animal5/{{USER}}">
+        <img class="img-start"src="/static/images/Sloth.gif"height = "20%"width = "20%">       
+      </a>
+      <a href="/Animal6/{{USER}}">
+        <img class="img-start"src="/static/images/Panther.gif"height = "25%"width = "25%">
+      </a>
+    </div>
+    <div class=" text-center">
+      <div class="btn-group">
+        <button class="btn btn-border-underline  btn-lg"><a href="/Animal4/{{USER}}">แพนด้า</a> </button>
+        <button class="btn btn-border-underline  btn-lg"><a href="/Animal5/{{USER}}">สลอธ</a> </button>  
+        <button class="btn btn-border-underline  btn-lg"><a href="/Animal6/{{USER}}">เสือดำ</a> </button>
+      </div>
+      <br><br><br>
+    </div>
+  </div>
+  
+  </body>
+</html>

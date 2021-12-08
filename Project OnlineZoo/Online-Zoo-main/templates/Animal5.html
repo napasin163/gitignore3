@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homePage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/firstPage.css') }}">
+          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>สลอธ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400&display=swap" rel="stylesheet">
+    <style>body{font-family: 'Mitr', sans-serif;}</style>
+
+    <style>
+      body {background-image:url(/static/images/BGA5.gif); background-size: 100%100%;;
+      background-attachment: fixed;}
+      .container {background: rgb(20, 20, 20);color: #fff;opacity: 0.95;}
+      .center {display: block;margin-left: auto;margin-right: auto;}
+      nav {background: rgb(20, 20, 20);color: #fff;opacity: 1;}
+    </style>
+</head>
+<body>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-info">
+        <img class="img-start"src="/static/images/LOGO.png"height = "5%"width = "5%" href="/home/{{USER}}">
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home/{{USER}}">Home<span class="sr-only">(current)</span></a>
+            </li>
+
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animals</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="/Animal1/{{USER}}">นาก</a>
+                    <a class="dropdown-item" href="/Animal2/{{USER}}">เพนกวิน</a>
+                    <a class="dropdown-item" href="/Animal3/{{USER}}">โคอาล่า</a>
+                    <a class="dropdown-item" href="/Animal4/{{USER}}">แพนด้า</a>
+                    <a class="dropdown-item" href="/Animal5/{{USER}}">สลอธ</a>
+                    <a class="dropdown-item" href="/Animal6/{{USER}}">เสือดำ</a>
+                </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-border-underline my-2 my-sm-0"><a href = "/User/{{USER}}">{{USER}}</a></button>
+            </form>
+        </div>
+        </nav>
+    </div>
+    <!-- Button trigger modal -->
+    <img class="SIGN4" src="/static/images/sign5.png" width="1200px" height="1200px">
+    <div class="BTN4"><button type="button" class="btn btn-success btn-lg py-4 px-2" data-toggle="modal" data-target="#modelId">ข้อมูล</button></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">สลอธ (Sloth)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <img src="/static/images/Sloth2.jpg" class="img-fluid pb-5">
+                    <p>"สลอธ อาศัยอยู่ที่ ทวีปอเมริกาเหนือแต่ปัจจุบันพบมากในป่าร้อนชื้นของอเมริกากลางและใต้ อาศัยอยู่บนต้นไม้เป็นหลัก อาหารของสลอธจะกินใบไม้และผลไม้ ที่มีใบไม้หนาและแข็ง ยากต่อการย่อย นิสัยของสลอธนั้นจะเชื่องช้า อืดอาดไม่ค่อยเข้าสังคมเพราะหมดเวลาไปกับการนอน 15-20 ชั่วโมง/วัน จุดเด่นของสัตว์สลอธนั่นเป็นสัตว์ที่เคลื่อนที่ช้าที่สุดในโลก อายุของสลอธนั้น  นักวิทยาศาสตร์ยังหาข้อสรุปที่แน่นอนไม่ได้ว่าสลอธมีอายุยืนยาวได้เท่าไหร่ ขนาดตัวสลอธจะอยู่ที่ 23 นิ้ว น้ำหนักประมาณ 4 กิโลกรัม สิ่งที่น่าสนใจเกี่ยวกับสัตว์ คือ สลอธนั้นเคลื่อนไหวได้รวดเร็วเป็นสามเท่าจากปกติเมื่ออยู่ในน้ำ และจะขยันก็ต่อเมื่อมีความต้องการทางเพศ หรืออยู่ในช่วงเวลาที่ต้องผสมพันธุ์นั้น
+                    "</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

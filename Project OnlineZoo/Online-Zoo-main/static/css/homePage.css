@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+button {
+    margin: 1rem;
+}
+
+.btn {
+    background-color: var(--background-color);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    --background-color: #E3E3E3;
+    --border-size: 2px;
+    --accent-color: #0AF;
+}
+
+.btn.btn-border-pop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn.btn-border-pop:hover::before,
+.btn.btn-border-pop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+.btn.btn-background-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+    transform: scaleX(1);
+}
+
+.btn.btn-background-slide {
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+    color: white;
+}
+
+.btn.btn-background-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: transform 500ms ease-in-out;
+    transform: scale(1.5);
+}
+
+.btn.btn-background-circle:hover::before,
+.btn.btn-background-circle:focus::before {
+    transform: scale(0);
+}
+
+.btn.btn-background-circle {
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--accent-color);
+    transition: color 500ms ease-in-out;
+}
+
+.btn.btn-background-circle:hover,
+.btn.btn-background-circle:focus {
+    color: white;
+}
+
+.btn.btn-border-underline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-color);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+}
+
+.btn.btn-border-underline:hover::before,
+.btn.btn-border-underline:focus::before {
+    transform: scaleX(1);
+}
+
+.SIGN {
+    position: absolute;
+    margin: auto;
+    bottom: 0%;
+    right: 29%;
+    width: 18%;
+    height: 35%;
+}
+
+.SIGN2 {
+    position: absolute;
+    margin: auto;
+    bottom: 0%;
+    right: 39%;
+    width: 18%;
+    height: 35%;
+}
+
+.SIGN3 {
+    position: absolute;
+    margin: auto;
+    bottom: 0%;
+    right: 65.4%;
+    width: 18%;
+    height: 35%;
+}
+
+.SIGN4 {
+    position: absolute;
+    margin: auto;
+    bottom: 0%;
+    right: 13.3%;
+    width: 18%;
+    height: 35%;
+}
+
+.FOOD1 {
+    position: absolute;
+    margin: auto;
+    bottom: 0%;
+    right: 76%;
+    width: 15%;
+    height: 27%;
+}
+
+.A1 {
+    position: absolute;
+    margin: auto;
+    bottom: 32%;
+    right: 66%;
+    width: 20%;
+    height: 48%;
+    /*-webkit-box-reflect: below;*/
+}
+
+.A2 {
+    position: absolute;
+    margin: auto;
+    bottom: 19%;
+    right: 11%;
+    width: 20%;
+    height: 48%;
+    /*-webkit-box-reflect: below;*/
+}
+
+.BTN1 {
+    position: absolute;
+    margin: auto;
+    bottom: 18%;
+    right: 38.7%;
+    width: auto;
+    height: auto;
+    /*-webkit-box-reflect: below;*/
+}
+
+.BTN2 {
+    position: absolute;
+    margin: auto;
+    bottom: 18%;
+    right: 48.7%;
+    width: auto;
+    height: auto;
+    /*-webkit-box-reflect: below;*/
+}
+
+.BTN3 {
+    position: absolute;
+    margin: auto;
+    bottom: 18%;
+    right: 75%;
+    width: auto;
+    height: auto;
+    /*-webkit-box-reflect: below;*/
+}
+
+.BTN4 {
+    position: absolute;
+    margin: auto;
+    bottom: 18%;
+    right: 23%;
+    width: auto;
+    height: auto;
+    /*-webkit-box-reflect: below;*/
+}
+
+.A3 {
+    position: absolute;
+    margin: auto;
+    bottom: 0%;
+    right: 10%;
+    width: 30%;
+    height: 65%;
+    /*-webkit-box-reflect: below;*/
+}
+
+.shake-text {
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.shake-content {
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
